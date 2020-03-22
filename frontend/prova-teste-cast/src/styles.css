@@ -1,0 +1,71 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.title-box{
+    position: fixed;
+    max-width: 900;
+    max-height: 450;
+}
+
+.tileCaroucel {
+    max-width: 500px;
+    max-height: 400px;
+  }
+
+.formularios{
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbarSpace{
+    flex: 1 1;
+}
+
+.iconSpace{
+    padding: 0 14px;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 160px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu-toolbar {
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+}
+
+.sideNav-container{
+    flex: 1;
+    top: 50px;
+}
+
+mat-sidenav{
+    
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sideNav-menu-list{
+    display: flex;
+}
+
+.menu-data-container{
+    position: inherit;
+    top: 50px;
+    width: 900px;
+    padding-left: 55px;
+}

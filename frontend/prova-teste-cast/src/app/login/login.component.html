@@ -1,0 +1,28 @@
+<div class="col-lg-8 justify-content-center">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+     Entrar
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="formularios" [formGroup]="loginForm" class="formularios" >
+     <mat-form-field>
+       <input matInput formControlName="email" placeholder="E-mail" type="email">
+     </mat-form-field>
+     <mat-form-field>
+       <input matInput formControlName="senha" placeholder="Senha" [type]="hide ? 'password' : 'text'" required>
+       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>     
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="checkLogin()">
+      Login
+    </button>
+    <a mat-raised-button routerLink="/signUp">Cadastrar novo usuário</a>
+    <button mat-button color="primary" (click)="openRedefinirSenha()">Redefinir Senha</button>
+    <span>Se for um novo funcionário.</span><a routerLink="/newEmployee">Clique aqui</a>
+  </mat-card-actions>
+</mat-card>
+</div>

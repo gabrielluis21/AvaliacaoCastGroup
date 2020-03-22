@@ -1,0 +1,22 @@
+<mat-card class="menu-option-container">
+  <mat-card-header>
+    <mat-card-title>
+      <h4>Cadastro de Categorias</h4>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <button mat-button color="primary" (click)="submit()">
+      <mat-icon>check</mat-icon>
+      Salvar
+    </button>
+    <button mat-button>
+      <mat-icon>mode_edit</mat-icon>
+      Editar
+    </button>
+  </mat-card-content>
+</mat-card>
+<form class="formularios" [formGroup]="newCategoryForm">
+  <mat-form-field>
+    <textarea matInput formControlName="description" type="text" placeholder="Descrição do curso"></textarea>
+  </mat-form-field>
+</form>

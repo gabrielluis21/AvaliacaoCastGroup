@@ -1,0 +1,42 @@
+<div >
+    <mat-card class="menu-option-container">
+     <mat-card-header>
+       <mat-card-title>
+         <h4>Cadastro de Cursos</h4>
+       </mat-card-title>
+     </mat-card-header>
+     <mat-card-content>
+     <button mat-button color="primary" (click)="save(cadCourseForm)">
+         <mat-icon>check</mat-icon>
+         Salvar
+       </button>
+       <button mat-button [disabled]="!curso">
+         <mat-icon>mode_edit</mat-icon>
+         Editar
+       </button>
+      </mat-card-content>
+    </mat-card>
+    <form class="formularios" [formGroup]="cadCourseForm" [(ngModel)]="curso">
+       <mat-form-field>
+         <input matInput formControlName="DescricaoAssunto" type="text" placeholder="Descricao Assunto">
+       </mat-form-field>
+       <mat-form-field>
+        <input matInput [matDatepicker]="picker" formControlName="DataInicio" placeholder="Data de Inicio">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+       </mat-form-field> 
+       <mat-form-field> 
+        <mat-label>Categoria</mat-label>
+        <mat-select [(value)]="selected">
+          <mat-option *ngFor="let cat of category" [value]="category.id">
+            {{category.description}}
+          </mat-option>
+        </mat-select>
+       </mat-form-field> 
+       <mat-form-field>
+        <input matInput formControlName="DataFim" [matDatepicker]="picker" placeholder="Data de Nascimento">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field> 
+    </form>
+   </div>
