@@ -14,10 +14,13 @@ const routes: Routes = [
   {path:'', redirectTo:'/home', pathMatch: 'full'},
   {path:'home', component: LoginComponent},
   {path:'signUp', component: StudentFormComponent},
-  {path:'newEemployee', component: EmployeeFormComponent},
-  {path:'mainMenu', component: AdminMainMenuComponent, canActivate: [AuthGaurdService]},
-  {path:'Menu', component: EmployeeMainMenuComponent, canActivate: [AuthGaurdService]},
-  {path:'myMenu', component: StudentMenuComponent, canActivate: [AuthGaurdService]},
+  {path:'newEmployee', component: EmployeeFormComponent},
+  {path:'mainMenu', component: AdminMainMenuComponent},
+  {path:'menu', component: EmployeeMainMenuComponent},
+  {path:'myMenu', component: StudentMenuComponent}
+  //{path:'mainMenu', component: AdminMainMenuComponent, canActivate: [AuthGaurdService]},
+  //{path:'menu', component: EmployeeMainMenuComponent, canActivate: [AuthGaurdService]},
+  //{path:'myMenu', component: StudentMenuComponent, canActivate: [AuthGaurdService]},
 ];
 
 @NgModule({

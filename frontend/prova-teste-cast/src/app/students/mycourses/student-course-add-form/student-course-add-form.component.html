@@ -15,20 +15,20 @@
     </button>
   </mat-card-content>
 </mat-card>
-<form class="formularios" [formGroup]="newCourseForm">
+<form class="formularios" [formGroup]="addCourseForm">
   <mat-form-field>
-    <textarea matInput formControlName="description" type="text" placeholder="Descrição do curso"></textarea>
+    <textarea matInput formControlName="name" type="text" placeholder="Descrição do curso"></textarea>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Data de início</mat-label>
-    <input matInput formControlName="begin" [matDatepicker]="picker"/>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <input matInput formControlName="begin" [matDatepicker]="beginPicker"/>
+    <mat-datepicker-toggle matSuffix [for]="beginPicker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Data de témino</mat-label>
-    <input matInput formControlName="end" [matDatepicker]="picker"/>
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <input matInput formControlName="end" [matDatepicker]="endPicker"/>
+    <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
 </form>

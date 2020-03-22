@@ -1,4 +1,4 @@
-div class="menu-container">
+<div class="menu-container">
  <mat-toolbar class="menu-toolbar">
   <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>  
    <h2>Bem vindo</h2>
@@ -69,12 +69,12 @@ div class="menu-container">
  </mat-sidenav-container>
 </div>
 <div [ngSwitch]="menuOptions" class="menu-data-container container-fluid">
- <app-category-form *ngSwitchCasr="'#cadastroCategoria'"></app-category-form>
- <app-course-form *ngSwitchCase="'#cadastroCurso'"></app-employee-form>
+ <app-category-form *ngSwitchCase="'#cadastroCategoria'"></app-category-form>
+ <app-course-form *ngSwitchCase="'#cadastroCurso'"></app-course-form>
  <app-student-form *ngSwitchCase="'#cadastroEstudante'"></app-student-form>
  <app-employee-form *ngSwitchCase="'#cadastroFuncionario'"></app-employee-form>
  <app-category-sheet *ngSwitchCase="'#categorySheet'"></app-category-sheet>
  <app-course-sheet *ngSwitchCase="'#courseSheet'"></app-course-sheet>
  <app-student-sheet *ngSwitchCase="'#studentSheet'"></app-student-sheet>
- <app-employee-relatorio *ngSwitchCase="'#employeeSheet'"></app-employee-relatorio> 
+ <app-employee-sheet *ngSwitchCase="'#employeeSheet'"></app-employee-sheet> 
 </div>

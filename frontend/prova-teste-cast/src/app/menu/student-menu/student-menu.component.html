@@ -1,3 +1,75 @@
-<p>
-  student-menu works!
-</p>
+<div class="menu-container">
+  <mat-toolbar class="menu-toolbar">
+   <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>  
+    <h2>Bem vindo</h2>
+    <span class="toolbarSpace"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+      <mat-icon svgIcon="menu-icon">Menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+     <button mat-menu-item>
+       Meu Perfil
+       <mat-icon svgIcon="person-icon">Person</mat-icon>
+     </button>
+     <button mat-menu-item>
+       Sair
+       <mat-icon svgIcon="logout-icon">Account-logout</mat-icon>
+     </button>
+    </mat-menu>
+   </mat-toolbar>
+ 
+   <mat-sidenav-container class="sideNav-container" [style.marginTop.px]="mobileQuery.matches ? 210 : 0">
+    <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches" fixedTopGap="210">
+     <mat-list>
+       <mat-list-item>        
+        <a routerLink="/myMenu"> 
+         <h4><mat-icon>home</mat-icon> Dashboard</h4>
+       </a>
+       </mat-list-item>
+     </mat-list>
+     <mat-list>
+     <mat-divider></mat-divider>
+     <mat-accordion mat-list-item>
+      <mat-expansion-panel>
+       <mat-expansion-panel-header>
+        <mat-panel-title >
+           <mat-icon>mode_edit</mat-icon>
+           Cadastros
+        </mat-panel-title>
+       </mat-expansion-panel-header>
+       <mat-list *ngFor="let nav of fillerNavCadastros">
+        <mat-list-item>
+        <button mat-button (click)="menuClick(nav.option)">
+           <mat-icon>{{nav.icon}}</mat-icon>
+         {{nav.name}}
+        </button>
+       </mat-list-item>
+      </mat-list>
+     </mat-expansion-panel>
+     <mat-expansion-panel>
+      <mat-expansion-panel-header>
+       <mat-panel-title >
+           <mat-icon svgIcon="document">Documento</mat-icon>
+         Relatórios
+       </mat-panel-title>
+      </mat-expansion-panel-header>
+       <mat-list *ngFor="let rel of fillerNavRelatorios">
+        <mat-list-item>
+         <button mat-button (click)="menuClick(rel.option)">
+          <mat-icon>{{rel.icon}}</mat-icon>
+          {{rel.name}}
+         </button>
+        </mat-list-item>
+       </mat-list>
+      </mat-expansion-panel>
+     </mat-accordion>
+    </mat-list>
+   </mat-sidenav>
+  </mat-sidenav-container>
+ </div>
+ <div [ngSwitch]="menuOptions" class="menu-data-container container-fluid">
+  <app-student-course-add-form *ngSwitchCase="'#addCourse'"></app-student-course-add-form>
+  <app-student-course-sheet *ngSwitchCase="'#myCourse'"></app-student-course-sheet> 
+ </div>
+ 
