@@ -6,8 +6,7 @@ import { StudentCourse } from 'src/app/models/student-course';
 
 @Component({
   selector: 'app-student-course-add-form',
-  templateUrl: './student-course-add-form.component.html',
-  styleUrls: ['./student-course-add-form.component.css']
+  templateUrl: './student-course-add-form.component.html'
 })
 export class StudentCourseAddFormComponent implements OnInit {
 

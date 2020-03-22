@@ -5,8 +5,7 @@ import { StudentCourseService } from 'src/app/services/studentcourse.service';
 
 @Component({
   selector: 'app-student-course-sheet',
-  templateUrl: './student-course-sheet.component.html',
-  styleUrls: ['./student-course-sheet.component.css']
+  templateUrl: './student-course-sheet.component.html'
 })
 export class StudentCourseSheetComponent implements OnInit {
 

@@ -9,8 +9,7 @@ import { Roles } from '../../models/roles';
 
 @Component({
   selector: 'app-employee-form',
-  templateUrl: './employee-form.component.html',
-  styleUrls: ['./employee-form.component.css']
+  templateUrl: './employee-form.component.html'
 })
 export class EmployeeFormComponent implements OnInit {
 
