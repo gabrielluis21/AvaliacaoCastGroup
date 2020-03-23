@@ -12,7 +12,7 @@ export class AdminMainMenuComponent implements OnInit {
   mobileQuery: MediaQueryList;
 
   fillerNavCadastros = [
-    {name:'Categorias', option:'#cadastroCategory', icon:'assignment'},
+    {name:'Categorias', option:'#cadastroCategoria', icon:'assignment'},
     {name:'Cursos', option:'#cadastroCurso', icon:'assignment'},
     {name:'Estudantes', option:'#cadastroEstudante', icon:'person'},
     {name:'Funcionarios', option:'#cadastroFuncionario', icon:'person'}

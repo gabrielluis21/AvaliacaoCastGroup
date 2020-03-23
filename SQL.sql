@@ -93,3 +93,29 @@ insert into role values(1,'admin');
 insert into role values(2, 'funcionário');
 insert into role values(3, 'usuario');
 
+INSERT INTO curso VALUES(1,'Java', now(), now(), 2);
+INSERT INTO curso VALUES(2,'JavaScript',now(),now(),2);
+INSERT INTO curso VALUES(3,'React',now(),now(),2);
+INSERT INTO curso VALUES(4,'Angular',now(),now(),2);
+
+INSERT INTO usuario VALUES(1,'gabrielluis_21@hotmail.com','2L8PFGK','gabriel.silva');
+INSERT INTO usuario VALUES(2,'admin@admin.com','LL8PFGK','ADMIN');
+INSERT INTO usuario VALUES(3,'teste@cast.com.br','12345678','test');
+INSERT INTO usuario VALUES(4,'g.luis@gmail.com','7H5PFGK','g.luis');
+
+INSERT INTO usuario_role VALUES( 1, 1);
+INSERT INTO usuario_role VALUES( 2, 1);
+INSERT INTO usuario_role VALUES( 3, 3);
+INSERT INTO usuario_role VALUES( 4, 2);
+
+INSERT INTO empregado VALUES(1,'Análista desenvolvedor Jr','2020-04-05','1994-01-21','Gabriel',1);
+INSERT INTO empregado VALUES(2,'Estágiario','2019-04-05','2000-10-21','Roberto', 2);
+
+INSERT INTO aluno VALUES(1,'1994-01-21','R. Domingos Calderazzo 87 Jardim Pagliuso','Gabriel','(16)98120-2154', 'Taquaritinga',1);
+INSERT INTO aluno VALUES(2,'1994-06-06','R. Carlos Gomes 144 Centro', 'Vinícios','(16)99755-0105', 'Araraquara', 4);
+
+INSERT INTO aluno_curso VALUES(1,'2020-09-25','2020-03-25',1,3);
+INSERT INTO aluno_curso VALUES(1,'2020-09-25','2020-03-25',1,1);
+INSERT INTO aluno_curso VALUES(1,'2020-09-25','2020-03-25',1,2);
+INSERT INTO aluno_curso VALUES(1,'2020-09-25','2020-03-25',1,4);
+

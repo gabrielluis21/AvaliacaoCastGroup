@@ -23,6 +23,9 @@ public class Aluno {
     @Column(name = "telefone", nullable = false)
     private String telefone;
 
+    @Column(name = "cidade", nullable = false)
+    private String cidade;
+
     @OneToOne(cascade = CascadeType.ALL)
     private Usuario user;
 
@@ -64,6 +67,14 @@ public class Aluno {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 
     public Usuario getUser() {
