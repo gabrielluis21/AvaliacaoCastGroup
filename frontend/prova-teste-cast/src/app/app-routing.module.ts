@@ -15,12 +15,12 @@ const routes: Routes = [
   {path:'home', component: LoginComponent},
   {path:'signUp', component: StudentFormComponent},
   {path:'newEmployee', component: EmployeeFormComponent},
-  {path:'mainMenu', component: AdminMainMenuComponent},
-  {path:'menu', component: EmployeeMainMenuComponent},
-  {path:'myMenu', component: StudentMenuComponent}
-  //{path:'mainMenu', component: AdminMainMenuComponent, canActivate: [AuthGaurdService]},
-  //{path:'menu', component: EmployeeMainMenuComponent, canActivate: [AuthGaurdService]},
-  //{path:'myMenu', component: StudentMenuComponent, canActivate: [AuthGaurdService]},
+  //{path:'mainMenu', component: AdminMainMenuComponent},
+  //{path:'menu', component: EmployeeMainMenuComponent},
+  //{path:'myMenu', component: StudentMenuComponent}
+  {path:'mainMenu', component: AdminMainMenuComponent, canActivate: [AuthGaurdService]},
+  {path:'menu', component: EmployeeMainMenuComponent, canActivate: [AuthGaurdService]},
+  {path:'myMenu', component: StudentMenuComponent, canActivate: [AuthGaurdService]},
 ];
 
 @NgModule({
